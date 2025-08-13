@@ -1,17 +1,17 @@
-import java.util.Arrays; // Import this to use Arrays methods
+import java.util.*;
 
 public class ArraysCC {
     public static void main(String[] args) {
-        int marks[] = new int[50]; // default values will be 0
-        int numbers[] = {1, 2, 3};
-        int moreNumbers[] = {4, 5, 6};
-        String fruits[] = {"apple", "orange", "mango"};
+        int marks[] = new int[100]; 
 
-        // Printing arrays
-        System.out.println(marks);
-        // System.out.println(Arrays.toString(marks));
-        // System.out.println(Arrays.toString(numbers));
-        // System.out.println(Arrays.toString(moreNumbers));
-        // System.out.println(Arrays.toString(fruits));
+        Scanner sc = new Scanner(System.in);
+
+        marks[0] = sc.nextInt();
+        marks[1] = sc.nextInt();
+        marks[2] = sc.nextInt();
+
+        System.out.println("Phy : "+ marks[0]);
+        System.out.println("Chem : "+ marks[1]);
+        System.out.println("Math : "+ marks[2]);
     }
 }
