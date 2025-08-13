@@ -22,29 +22,64 @@ public class ArraysCC {
 
 // -------------------------------------------------
 
-    public static int largestNum(int number[]){
-       int largest = Integer.MIN_VALUE; // Start with the smallest possible integer so any number in the array will be larger
-       int smallest = Integer.MAX_VALUE; // Start with the largest possible integer so any number in the array will be smaller
+    // public static int largestNum(int number[]){
+    //    int largest = Integer.MIN_VALUE; // Start with the smallest possible integer so any number in the array will be larger
+    //    int smallest = Integer.MAX_VALUE; // Start with the largest possible integer so any number in the array will be smaller
 
 
-        for(int j=0; j<number.length; j++){
-            if(smallest > number[j]){
-                smallest = number[j];
-            }
-        }
+    //     for(int j=0; j<number.length; j++){
+    //         if(smallest > number[j]){
+    //             smallest = number[j];
+    //         }
+    //     }
         
-        for(int i=0; i<number.length; i++){
-            if(largest < number[i]) {
-                largest = number[i];
-            }
-        }
-        System.out.println("Smallest Value is : "+smallest);
-        return largest;
+    //     for(int i=0; i<number.length; i++){
+    //         if(largest < number[i]) {
+    //             largest = number[i];
+    //         }
+    //     }
+    //     System.out.println("Smallest Value is : "+smallest);
+    //     return largest;
+    // }
 
-    }
+// -------------------------------------------------
+
+    // public static int binarySearch(int numbers[], int key){
+    //     int start = 0, end = numbers.length-1;
+
+    //     while(start <= end) {
+    //         int mid = (start + end) / 2;
+
+    //         //comparison 
+    //         if(numbers[mid] == key){ // found
+    //             return mid;
+    //         }
+    //         if(numbers[mid] < key){ //right
+    //             start = mid+1;
+    //         } else {  //left
+    //             end = mid-1;
+    //         }
+    //     }
+    //     return -1;
+    // }
+
+// -------------------------------------------------
+
+
     public static void main(String[] args) {
-        int number[] = {3,4,6,2,5};
-        System.out.println("largest value is : "+ largestNum(number));
+
+        
+
+// -------------------------------------------------
+
+        // int numbers[] = {2,4,6,8,10,12,14};
+        // int key = 10;
+        // System.out.println("Index for key is : "+ binarySearch(numbers, key));
+
+// -------------------------------------------------
+
+        // int number[] = {3,4,6,2,5};
+        // System.out.println("largest value is : "+ largestNum(number));
 
 // -------------------------------------------------
 
