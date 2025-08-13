@@ -11,24 +11,52 @@ public class ArraysCC {
 
 // -------------------------------------------------
 
-    public static int linearSearch(int arr[], int key) {
-        for(int i=0; i<arr.length; i++) {
-            if(arr[i] == key){
-                return i;
+    // public static int linearSearch(int arr[], int key) {
+    //     for(int i=0; i<arr.length; i++) {
+    //         if(arr[i] == key){
+    //             return i;
+    //         }
+    //     }
+    //     return -1;
+    // }
+
+// -------------------------------------------------
+
+    public static int largestNum(int number[]){
+       int largest = Integer.MIN_VALUE; // Start with the smallest possible integer so any number in the array will be larger
+       int smallest = Integer.MAX_VALUE; // Start with the largest possible integer so any number in the array will be smaller
+
+
+        for(int j=0; j<number.length; j++){
+            if(smallest > number[j]){
+                smallest = number[j];
             }
         }
-        return -1;
+        
+        for(int i=0; i<number.length; i++){
+            if(largest < number[i]) {
+                largest = number[i];
+            }
+        }
+        System.out.println("Smallest Value is : "+smallest);
+        return largest;
+
     }
     public static void main(String[] args) {
-        int arr[] = {2,4,6,8,10,12,14,16}; 
-        int key = 10;
+        int number[] = {3,4,6,2,5};
+        System.out.println("largest value is : "+ largestNum(number));
 
-        int index = linearSearch(arr, key);
-        if(index == -1) {
-            System.out.println("Not Found");
-        }else {
-            System.out.println("Key is at index : "+index);
-        }
+// -------------------------------------------------
+
+        // int arr[] = {2,4,6,8,10,12,14,16}; 
+        // int key = 10;
+
+        // int index = linearSearch(arr, key);
+        // if(index == -1) {
+        //     System.out.println("Not Found");
+        // }else {
+        //     System.out.println("Key is at index : "+index);
+        // }
 
 // -------------------------------------------------
 
