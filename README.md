@@ -32,6 +32,8 @@ Dynamic Programming
 
 Greedy Algorithms
 
+---
+
 🎯 Goal
 This repository is my personal DSA practice log in Java.
 It helps me:
@@ -41,6 +43,8 @@ Build problem-solving skills
 Maintain consistency
 
 Prepare for placements & technical interviews
+
+---
 
 🤝 Contributing
 This is primarily for my own practice, but if you spot any mistakes or have suggestions, feel free to open a pull request or raise an issue.
