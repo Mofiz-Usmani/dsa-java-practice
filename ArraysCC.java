@@ -6,6 +6,8 @@ public class ArraysCC {
 
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Length of Array = "+ marks.length);
+
         marks[0] = sc.nextInt();
         marks[1] = sc.nextInt();
         marks[2] = sc.nextInt();
@@ -13,5 +15,13 @@ public class ArraysCC {
         System.out.println("Phy : "+ marks[0]);
         System.out.println("Chem : "+ marks[1]);
         System.out.println("Math : "+ marks[2]);
+        // System.out.println("Math : "+ marks[3]); // pritns zero as empty array
+
+        int percentage = (marks[0] + marks[1] + marks[2])/3;
+        System.out.println("Percentage = "+percentage + "%");
+
+        // marks[2] = 100;
+        // marks[2] = marks[2] + 1;
+        // System.out.println("Math : "+marks[2]);
     }
 }
