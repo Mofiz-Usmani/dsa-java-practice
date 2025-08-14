@@ -65,29 +65,50 @@ public class ArraysCC {
 
 // -------------------------------------------------
 
-    public static void reverse(int numbers[]){
-        int first = 0, last = numbers.length-1;
+    // public static void reverse(int numbers[]){
+    //     int first = 0, last = numbers.length-1;
 
-        while(first < last) {
-            //swap 
-            int temp = numbers[last];
-            numbers[last] = numbers[first];
-            numbers[first] = temp;
+    //     while(first < last) {
+    //         //swap 
+    //         int temp = numbers[last];
+    //         numbers[last] = numbers[first];
+    //         numbers[first] = temp;
 
-            first++;
-            last--;
+    //         first++;
+    //         last--;
+    //     }
+    // }
+
+// -------------------------------------------------
+
+    // Pairs in Array
+    public static void printPairs(int numbers[]) {
+        int tp = 0;
+
+        for(int i=0; i<numbers.length; i++){
+            int curr = numbers[i];
+            for(int j=i+1; j<numbers.length; j++){
+                System.out.print("(" + curr + "," + numbers[j] + ")");
+                tp++;
+            }
+            System.out.println();
         }
+        System.out.println("Total pairs = "+tp);
     }
 
     public static void main(String[] args) {
+        // Pairs in Array
         int numbers[] = {2,4,6,8,10};
+        printPairs(numbers);
 
-        reverse(numbers);
-        for(int i=0; i<numbers.length; i++){
-            System.out.print(numbers[i]+" ");
-        }
+// -------------------------------------------------
 
-        
+        // int numbers[] = {2,4,6,8,10};
+
+        // reverse(numbers);
+        // for(int i=0; i<numbers.length; i++){
+        //     System.out.print(numbers[i]+" ");
+        // }
 
 // -------------------------------------------------
 
