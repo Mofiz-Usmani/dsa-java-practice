@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.concurrent.Flow.Subscriber;
 
 public class ArraysCC {
     // public static void update(int marks[], int nonChangable) {
@@ -82,24 +83,59 @@ public class ArraysCC {
 // -------------------------------------------------
 
     // Pairs in Array
-    public static void printPairs(int numbers[]) {
-        int tp = 0;
+    // public static void printPairs(int numbers[]) {
+    //     int tp = 0;
 
-        for(int i=0; i<numbers.length; i++){
-            int curr = numbers[i];
-            for(int j=i+1; j<numbers.length; j++){
-                System.out.print("(" + curr + "," + numbers[j] + ")");
-                tp++;
+    //     for(int i=0; i<numbers.length; i++){
+    //         int curr = numbers[i];
+    //         for(int j=i+1; j<numbers.length; j++){
+    //             System.out.print("(" + curr + "," + numbers[j] + ")");
+    //             tp++;
+    //         }
+    //         System.out.println();
+    //     }
+    //     System.out.println("Total pairs = "+tp);
+    // }
+
+// -------------------------------------------------
+
+    // Print Subarray and Sum
+    public static void printSubarrays(int numbers[]) {
+        int ts = 0; // total subarrays
+
+    for (int i = 0; i < numbers.length; i++) {
+        int start = i;
+        for (int j = i; j < numbers.length; j++) {
+            int end = j;
+            int sum = 0; // sum for current subarray
+
+            // Print elements and calculate sum
+            for (int k = start; k <= end; k++) {
+                System.out.print(numbers[k] + " ");
+                sum += numbers[k];
             }
+
+            // Print sum of the current subarray
+            System.out.print(" => Sum: " + sum);
+
+            ts++;
             System.out.println();
         }
-        System.out.println("Total pairs = "+tp);
+        System.out.println();
     }
+    System.out.println("Total subarrays = " + ts);
+}
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
+    int numbers[] = {2, 4, 6, 8, 10};
+    printSubarrays(numbers);
+
+
+// -------------------------------------------------
+
         // Pairs in Array
-        int numbers[] = {2,4,6,8,10};
-        printPairs(numbers);
+        // int numbers[] = {2,4,6,8,10};
+        // printPairs(numbers);
 
 // -------------------------------------------------
 
