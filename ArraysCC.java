@@ -100,36 +100,73 @@ public class ArraysCC {
 // -------------------------------------------------
 
     // Print Subarray and Sum
-    public static void printSubarrays(int numbers[]) {
-        int ts = 0; // total subarrays
+//     public static void printSubarrays(int numbers[]) {
+//         int ts = 0; // total subarrays
 
-    for (int i = 0; i < numbers.length; i++) {
-        int start = i;
-        for (int j = i; j < numbers.length; j++) {
-            int end = j;
-            int sum = 0; // sum for current subarray
+//     for (int i = 0; i < numbers.length; i++) {
+//         int start = i;
+//         for (int j = i; j < numbers.length; j++) {
+//             int end = j;
+//             int sum = 0; // sum for current subarray
 
-            // Print elements and calculate sum
-            for (int k = start; k <= end; k++) {
-                System.out.print(numbers[k] + " ");
-                sum += numbers[k];
-            }
+//             // Print elements and calculate sum
+//             for (int k = start; k <= end; k++) {
+//                 System.out.print(numbers[k] + " ");
+//                 sum += numbers[k];
+//             }
 
-            // Print sum of the current subarray
-            System.out.print(" => Sum: " + sum);
+//             // Print sum of the current subarray
+//             System.out.print(" => Sum: " + sum);
 
-            ts++;
-            System.out.println();
-        }
-        System.out.println();
-    }
-    System.out.println("Total subarrays = " + ts);
-}
+//             ts++;
+//             System.out.println();
+//         }
+//         System.out.println();
+//     }
+//     System.out.println("Total subarrays = " + ts);
+// }
+
+// -------------------------------------------------
+    //Max Subarray Sum
+    //  public static void printMaxSubarraySum(int numbers[]){
+    //      int currSum = 0;
+    //      int maxSum = Integer.MIN_VALUE;
+
+    //       for (int i = 0; i < numbers.length; i++) {
+    //     int start = i;
+    //     for (int j = i; j < numbers.length; j++) {
+    //         int end = j;
+    //         currSum = 0;
+    //         // Print elements and calculate sum
+    //         for (int k = start; k <= end; k++) {
+    //             currSum += numbers[k];
+    //         }
+    //         if(maxSum < currSum){
+    //             maxSum = currSum;
+    //         }
+    //     }
+    // }
+    //  System.out.println(maxSum);
+    // }
+    
+// -------------------------------------------------
+
 
 public static void main(String[] args) {
-    int numbers[] = {2, 4, 6, 8, 10};
-    printSubarrays(numbers);
 
+    
+
+// -------------------------------------------------
+
+    //Max Subarray Sum
+    // int numbers[] = {1,-2,6,-1,3};
+    // printMaxSubarraySum(numbers);
+
+// -------------------------------------------------
+
+    // Print Subarray and Sum
+    // int numbers[] = {2, 4, 6, 8, 10};
+    // printSubarrays(numbers);
 
 // -------------------------------------------------
 
