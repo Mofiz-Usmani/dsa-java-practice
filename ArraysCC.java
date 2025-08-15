@@ -1,6 +1,8 @@
 import java.util.*;
 import java.util.concurrent.Flow.Subscriber;
 
+import javax.swing.plaf.basic.BasicInternalFrameUI.InternalFramePropertyChangeListener;
+
 public class ArraysCC {
     // public static void update(int marks[], int nonChangable) {
     //     nonChangable = 10;
@@ -151,10 +153,66 @@ public class ArraysCC {
     
 // -------------------------------------------------
 
+//max Subarray prefix
+// public static void printMaxSubarrayPrefix(int numbers[]){
+//     int currSum = 0;
+//     int maxSum = Integer.MIN_VALUE;
+//     int prefix[] = new int[numbers.length];
+
+//     prefix[0] = numbers[0];
+//     //calculate prefix array
+//     for(int i=1; i<prefix.length; i++){
+//         prefix[i] = prefix[i-1] + numbers[i];
+//     }
+
+//        for (int i = 0; i < numbers.length; i++) {
+//         int start = i;
+//         for (int j = i; j < numbers.length; j++) {
+//             int end = j;
+
+//             currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start-1];
+
+//             if(maxSum < currSum){
+//                 maxSum = currSum;
+//             }
+//         }
+//     }
+//     System.out.println("Max sum = "+maxSum);
+// }
+
+// -------------------------------------------------
+
+    // Kadanes Algorithm 
+// public static int kadanes(int arr1[]){
+//       int max_ending_here = arr1[0];
+//         int max_so_far = arr1[0];
+
+//         for (int i = 1; i < arr1.length; i++) {
+//             // Either start new subarray at arr[i] or extend previous one
+//             max_ending_here = Math.max(arr1[i], max_ending_here + arr1[i]);
+//             // Update global max
+//             max_so_far = Math.max(max_so_far, max_ending_here);
+//         }
+//         return max_so_far;
+// }
+
+// -------------------------------------------------
 
 public static void main(String[] args) {
 
-    
+
+// -------------------------------------------------
+
+    // Kadanes Algorithm 
+    // int arr[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+    // int arr1[] = {-2, -3, -1, -4};
+    // System.out.println(kadanes(arr1));
+
+// -------------------------------------------------
+
+    //max Subarray prefix
+    // int numbers[] = {1,-2,6,-1,3};
+    // printMaxSubarrayPrefix(numbers);
 
 // -------------------------------------------------
 
