@@ -1,7 +1,5 @@
 import java.util.*;
-import java.util.concurrent.Flow.Subscriber;
 
-import javax.swing.plaf.basic.BasicInternalFrameUI.InternalFramePropertyChangeListener;
 
 public class ArraysCC {
     // public static void update(int marks[], int nonChangable) {
@@ -197,6 +195,7 @@ public class ArraysCC {
 // }
 
 // -------------------------------------------------
+
 
 public static void main(String[] args) {
 
