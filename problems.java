@@ -45,25 +45,33 @@ public class problems {
 // }
 
 // ----------------------------------------------------------------------------------------
-    public static void containDuplicate(int arr[]) {
-    boolean hasDuplicate = false;
 
-    for(int i = 0; i < arr.length; i++) {
-        for(int j = i + 1; j < arr.length; j++) {
-            if(arr[i] == arr[j]) {
-                hasDuplicate = true;
-                break; // duplicate found, stop inner loop
-            }
-        }
-        if(hasDuplicate) break; // stop outer loop too
-    }
+    //Duplicate arrays
+//     public static void containDuplicate(int arr[]) {
+//     boolean hasDuplicate = false;
 
-    System.out.println(hasDuplicate ? "True" : "False");
-}
+//     for(int i = 0; i < arr.length; i++) {
+//         for(int j = i + 1; j < arr.length; j++) {
+//             if(arr[i] == arr[j]) {
+//                 hasDuplicate = true;
+//                 break; // duplicate found, stop inner loop
+//             }
+//         }
+//         if(hasDuplicate) break; // stop outer loop too
+//     }
+
+//     System.out.println(hasDuplicate ? "True" : "False");
+// }
+
+// ----------------------------------------------------------------------------------------
 
 public static void main(String[] args) {
-    int arr[] = {1, 2, 3, 4};
-    containDuplicate(arr);  // Output: False
+
+// ----------------------------------------------------------------------------------------
+
+    //Duplicate arrays
+    // int arr[] = {1, 2, 3, 4};
+    // containDuplicate(arr);  // Output: False
 }
 
 
