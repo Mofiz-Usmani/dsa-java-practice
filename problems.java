@@ -45,9 +45,27 @@ public class problems {
 // }
 
 // ----------------------------------------------------------------------------------------
+    public static void containDuplicate(int arr[]) {
+    boolean hasDuplicate = false;
 
+    for(int i = 0; i < arr.length; i++) {
+        for(int j = i + 1; j < arr.length; j++) {
+            if(arr[i] == arr[j]) {
+                hasDuplicate = true;
+                break; // duplicate found, stop inner loop
+            }
+        }
+        if(hasDuplicate) break; // stop outer loop too
+    }
+
+    System.out.println(hasDuplicate ? "True" : "False");
+}
 
 public static void main(String[] args) {
+    int arr[] = {1, 2, 3, 4};
+    containDuplicate(arr);  // Output: False
+}
+
 
 
 
@@ -62,5 +80,4 @@ public static void main(String[] args) {
     //     int height[] = {4,2,0,6,3,2,5};
     //     System.out.println(trappedRainwater(height));
     // }
-}
 }
