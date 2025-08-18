@@ -50,8 +50,8 @@ public class BasicSorting {
     }
 
 public static void main(String args[]){
-    int arr[] = {3,2,1,5,4};
-    insertionSort(arr);
+    int arr[] = {5,4,1,3,2};
+    // insertionSort(arr);
     // selectionSort(arr);
     printArr(arr);
 // -----------------------------------------------------------------------------------------
