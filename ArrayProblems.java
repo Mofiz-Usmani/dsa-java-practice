@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class problems {
+public class ArrayProblems {
 
     // Trapped Water
     // public static int trappedRainwater(int height[]){
