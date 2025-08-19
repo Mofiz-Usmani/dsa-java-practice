@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class BasicSorting {
 
     // Bubble Sort
@@ -13,7 +15,7 @@ public class BasicSorting {
         }
     }
 
-    public static void printArr(int arr[]){
+    public static void printArr(Integer arr[]){
         for(int i=0; i<arr.length; i++){
             System.out.print(arr[i]+" ");
         }
@@ -51,9 +53,11 @@ public class BasicSorting {
     }
 
 public static void main(String args[]){
-    int arr[] = {5,4,1,3,2};
+    Integer arr[] = {5,4,1,3,2};
     // insertionSort(arr);
     // selectionSort(arr);
+    // Arrays.sort(arr,0,3);
+    Arrays.sort(arr, Collections.reverseOrder());
     printArr(arr);
 // -----------------------------------------------------------------------------------------
 
