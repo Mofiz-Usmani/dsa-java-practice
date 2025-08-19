@@ -80,7 +80,7 @@ public static void main(String args[]){
     // selectionSort(arr);
     // Arrays.sort(arr,0,3);
     // Arrays.sort(arr,0,3, Collections.reverseOrder());
-    countingSort(arr);
+    // countingSort(arr);
     printArr(arr);
 // -----------------------------------------------------------------------------------------
 
