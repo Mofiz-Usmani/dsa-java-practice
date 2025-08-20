@@ -12,7 +12,7 @@ public class Matrices {
                 }
             }
         }
-        System.out.println(max);
+        System.out.println("largest element in array is : " + max);
     }
     public static void main(String args[]){
         int matrix[][] = new int[3][3];
@@ -24,6 +24,7 @@ public class Matrices {
                 matrix[i][j] = sc.nextInt();
             }
         }
+        System.out.println();
 
         //Output : 
         for(int i=0; i<n; i++){
@@ -32,6 +33,7 @@ public class Matrices {
             }
             System.out.println();
         }
+            System.out.println();
         search(matrix);
     }
 }
