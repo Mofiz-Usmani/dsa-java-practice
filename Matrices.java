@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Matrices {
     public static void search(int matrix[][]){
-        int max = 0;
+        int max = matrix[0][0];
         for(int i=0; i<matrix.length; i++){
             for(int j=0; j<matrix[0].length; j++){
                     // System.out.println("Found at cell (" + i + "," + j + ")");
