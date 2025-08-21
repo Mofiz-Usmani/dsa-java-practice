@@ -56,8 +56,7 @@ public class Matrices {
         System.out.println();
     }
 
-    public static int diagonalSum(int matrix[][]) {
-        int sum = 0;
+    public static void diagonalSum(int matrix[][], int key) {
 
         // O(n^2) Approach
         // for (int i = 0; i < matrix.length; i++) {   
@@ -73,20 +72,24 @@ public class Matrices {
 
         // O(n) Approach
         for(int i=0; i<matrix.length; i++) {
-            sum += matrix[i][i];
+            if(key == matrix[i][i]) {
+                System.out.println("Key found at diagonal: (" + i + "," + i + ")");
+            }
             if (i != matrix.length - 1 - i) { // Avoid double counting the middle element in odd-sized matrices
-                sum += matrix[i][matrix.length - 1 - i];
+                if(key == matrix[i][matrix.length - 1 - i]) {
+                    System.out.println("Key found at anti-diagonal: (" + i + "," + (matrix.length - 1 - i) + ")");
+                }
             }
         }
-        
-        return sum;
     }
     public static void main(String args[]) {
         int matrix[][] = {
-            {0, 1, 2},
-            {3, 4, 5},
-            {6, 7, 8}
+            {10, 20, 30, 40},
+            {15, 25, 35, 45},
+            {27, 29, 37, 48},
+            {32, 33, 39, 50}
         };
+        int key = 39;
 
         // Spiral print
         // printSpiral(matrix);
@@ -95,7 +98,6 @@ public class Matrices {
         // search(matrix, 10);
 
         // Diagonal sum
-        int sum = diagonalSum(matrix);
-        System.out.println("Diagonal sum : " + sum);
+        diagonalSum(matrix, key);
     }
 }
