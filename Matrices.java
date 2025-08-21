@@ -56,6 +56,21 @@ public class Matrices {
         System.out.println();
     }
 
+    public static int diagonalSum(int matrix[][]) {
+        int sum = 0;
+
+        for (int i = 0; i < matrix.length; i++) {   
+            for(int j=0; j<matrix[0].length; j++){
+                if(i == j){
+                    sum += matrix[i][j];
+                }
+                else if(i+j == matrix.length - 1) {
+                    sum += matrix[i][j];
+                }
+            }
+        }
+        return sum;
+    }
     public static void main(String args[]) {
         int matrix[][] = {
             {1, 2, 3, 4},
@@ -65,9 +80,13 @@ public class Matrices {
         };
 
         // Spiral print
-        printSpiral(matrix);
+        // printSpiral(matrix);
 
         // Search example
-        search(matrix, 10);
+        // search(matrix, 10);
+
+        // Diagonal sum
+        int sum = diagonalSum(matrix);
+        System.out.println("Diagonal sum : " + sum);
     }
 }
