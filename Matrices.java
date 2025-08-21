@@ -56,7 +56,8 @@ public class Matrices {
         System.out.println();
     }
 
-    public static void diagonalSum(int matrix[][], int key) {
+    public static int diagonalSum(int matrix[][]) {
+        int sum = 0;
 
         // O(n^2) Approach
         // for (int i = 0; i < matrix.length; i++) {   
@@ -72,15 +73,33 @@ public class Matrices {
 
         // O(n) Approach
         for(int i=0; i<matrix.length; i++) {
-            if(key == matrix[i][i]) {
-                System.out.println("Key found at diagonal: (" + i + "," + i + ")");
-            }
+            sum += matrix[i][i];
             if (i != matrix.length - 1 - i) { // Avoid double counting the middle element in odd-sized matrices
-                if(key == matrix[i][matrix.length - 1 - i]) {
-                    System.out.println("Key found at anti-diagonal: (" + i + "," + (matrix.length - 1 - i) + ")");
-                }
+                sum += matrix[i][matrix.length - 1 - i];
             }
         }
+        
+        return sum;
+    }
+
+
+    public static boolean staircaseSearch(int matrix[][], int key) {
+        int row = 0, col = matrix[0].length - 1;
+
+        while(row < matrix.length && col >= 0){
+            if(matrix[row][col] == key){ 
+                System.out.println("Found key at ("+ row + "," + col + ")");
+                return true;
+            }
+            else if(key < matrix[row][col]) {
+                col--;
+            }
+            else {
+                row++;
+            }
+        }
+        System.out.println("Key not found");
+        return false;
     }
     public static void main(String args[]) {
         int matrix[][] = {
@@ -89,7 +108,7 @@ public class Matrices {
             {27, 29, 37, 48},
             {32, 33, 39, 50}
         };
-        int key = 39;
+        int key = 33;
 
         // Spiral print
         // printSpiral(matrix);
@@ -98,6 +117,11 @@ public class Matrices {
         // search(matrix, 10);
 
         // Diagonal sum
-        diagonalSum(matrix, key);
+        // int sum = diagonalSum(matrix);
+        // System.out.println("Diagonal sum : " + sum);
+
+
+        // Staircase search
+        staircaseSearch(matrix, key);
     }
 }
