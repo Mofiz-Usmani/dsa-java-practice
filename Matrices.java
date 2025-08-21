@@ -118,12 +118,9 @@ public class Matrices {
 
     public static void sumofnumbers(int matrix[][]) {
         int sum = 0;
-        for(int i=1; i<=matrix.length; i++) { // Start from 1 to exclude the first row
             for(int j=0; j<matrix[0].length; j++) {
-                sum += matrix[i][j];
+                sum += matrix[1][j];
             }
-            break;
-        }
         System.out.println(sum);
     }
 
