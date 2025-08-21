@@ -124,11 +124,30 @@ public class Matrices {
         System.out.println(sum);
     }
 
+    public static void trasnsposematrix(int matrix[][]) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+
+        int transposed[][] = new int[cols][rows];
+
+        for(int i=0; i<rows; i++) {
+            for(int j=0; j<cols; j++) {
+                transposed[j][i] = matrix[i][j];
+            }
+        }
+        System.out.println("Transposed Matrix:");
+        for(int i=0; i<cols; i++) {
+            for(int j=0; j<rows; j++) {
+                System.out.print(transposed[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String args[]) {
         int matrix[][] = {
-            {1, 4, 9},
-            {11, 4, 3},
-            {2, 2, 3}
+            {11, 12, 13},
+            {21, 22, 23}
         };
         int target = 8;
         int key = 33;
@@ -151,6 +170,9 @@ public class Matrices {
         // noofvalue(matrix, target);
 
         // Sum of numbers in the matrix excluding the first row
-        sumofnumbers(matrix);
+        // sumofnumbers(matrix);
+
+        // Transpose the matrix
+        trasnsposematrix(matrix);
     }
 }
