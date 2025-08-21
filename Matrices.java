@@ -116,10 +116,22 @@ public class Matrices {
     }
 
 
+    public static void sumofnumbers(int matrix[][]) {
+        int sum = 0;
+        for(int i=1; i<=matrix.length; i++) { // Start from 1 to exclude the first row
+            for(int j=0; j<matrix[0].length; j++) {
+                sum += matrix[i][j];
+            }
+            break;
+        }
+        System.out.println(sum);
+    }
+
     public static void main(String args[]) {
         int matrix[][] = {
-            {4,7,8},
-            {8,8,7}
+            {1, 4, 9},
+            {11, 4, 3},
+            {2, 2, 3}
         };
         int target = 8;
         int key = 33;
@@ -139,6 +151,9 @@ public class Matrices {
         // staircaseSearch(matrix, key);
 
         // Count occurrences of a value
-        noofvalue(matrix, target);
+        // noofvalue(matrix, target);
+
+        // Sum of numbers in the matrix excluding the first row
+        sumofnumbers(matrix);
     }
 }
