@@ -11,6 +11,12 @@ public class Strings {
         Scanner sc = new Scanner(System.in);
         String name;
         name = sc.nextLine();
-        System.out.println(name.length());
+        System.out.println(name.length());  // length of string
+
+        // Concatenation
+        String firstName = "John";
+        String lastName = "Doe";
+        String fullName = firstName + " " + lastName;
+        System.out.println(fullName);
     }
 }
