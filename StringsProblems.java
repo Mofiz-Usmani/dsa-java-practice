@@ -1,4 +1,4 @@
-import javax.swing.plaf.synth.SynthStyle;
+import java.util.*;
 
 public class StringsProblems {
     public static boolean isPalindrome(String str){
