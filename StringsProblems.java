@@ -33,17 +33,19 @@ public class StringsProblems {
     }
 
     public static void main(String[] args){
-        String path = "WNEENESENNN";
-        String str = "lol";
-        String s1 = "Tony";
-        String s2 = "Tony";
-        String s3 = new String("Tony");
 
-        if(s1 == s2){
-            System.out.println("s1 and s2 are same");
-        } else {
-            System.out.println("s1 and s2 are different");
-        }
+
+        // String path = "WNEENESENNN"; // Shortest path
+        // String str = "lol";  // Palindrome
+        // String s1 = "Tony";  // String comparison
+        // String s2 = "Tony";  // String comparison
+        // String s3 = new String("Tony"); // String comparison
+
+        // if(s1 == s2){
+        //     System.out.println("s1 and s2 are same");
+        // } else {
+        //     System.out.println("s1 and s2 are different");
+        // }
 
         // if(s1 == s3){
         //     System.out.println("s1 and s3 are same");
@@ -51,11 +53,13 @@ public class StringsProblems {
         //     System.out.println("s1 and s3 are different");
         // }
 
-        if(s1.equals(s3)){
-            System.out.println("s1 and s3 are same");
-        } else {
-            System.out.println("s1 and s3 are different");
-        }
+        // if(s1.equals(s3)){
+        //     System.out.println("s1 and s3 are same");
+        // } else {
+        //     System.out.println("s1 and s3 are different");
+        // }
+
+
         // Palindrome
         // System.out.println(isPalindrome(str));
 
