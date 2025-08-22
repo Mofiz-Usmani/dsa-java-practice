@@ -74,7 +74,7 @@ public class Matrices {
         // O(n) Approach
         for(int i=0; i<matrix.length; i++) {
             sum += matrix[i][i];
-            if (i != matrix.length - 1 - i) { // Avoid double counting the middle element in odd-sized matrices
+            if (i != matrix.length - 1 - i) {
                 sum += matrix[i][matrix.length - 1 - i];
             }
         }
