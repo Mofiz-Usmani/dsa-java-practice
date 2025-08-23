@@ -42,12 +42,27 @@ public class StringsProblems {
     }
 
     public static void main(String[] args){
-        String str = "HelloWorld";
+        String fruits[] = {"apple", "mango", "banana"};
+
+        String largest = fruits[0];
+
+        for(int i = 1; i < fruits.length; i++){
+            if(largest.compareTo(fruits[i]) < 0){  
+        // if current 'largest' comes before fruits[i], update
+                largest = fruits[i];
+            }
+        }
+        
+        System.out.println("Largest fruit (lexicographically): " + largest);
+
+
 
         // Substring using inbuilt function
+        // String str = "HelloWorld";
         // System.out.println(str.substring(0,4));
 
         // Substring using loop
+        // String str = "HelloWorld";
         // System.out.println(substring(str, 0, 4));
 
         // String path = "WNEENESENNN"; // Shortest path
