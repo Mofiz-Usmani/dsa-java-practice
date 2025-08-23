@@ -46,12 +46,15 @@ public class StringsProblems {
 
         String largest = fruits[0];
 
-        for(int i=1; i<fruits.length; i++){
-            if(largest.length() < fruits[i].length()){
+        for(int i = 1; i < fruits.length; i++){
+            if(largest.compareTo(fruits[i]) < 0){  
+        // if current 'largest' comes before fruits[i], update
                 largest = fruits[i];
             }
         }
-        System.out.println("Largest fruit is: " + largest);
+        
+        System.out.println("Largest fruit (lexicographically): " + largest);
+
 
 
         // Substring using inbuilt function
