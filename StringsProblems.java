@@ -43,7 +43,10 @@ public class StringsProblems {
     public static void main(String[] args){
         String str = "HelloWorld";
 
-        System.out.println(substring(str, 0, 4));
+        System.out.println(str.substring(0,4));
+
+        // Substring using loop
+        // System.out.println(substring(str, 0, 4));
 
         // String path = "WNEENESENNN"; // Shortest path
         // String str = "lol";  // Palindrome
