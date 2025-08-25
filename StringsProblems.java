@@ -41,20 +41,54 @@ public class StringsProblems {
         return substr;
     }
 
-    public static void main(String[] args){
-        String fruits[] = {"apple", "mango", "banana"};
+    public static String toUpperCase(String str){
+        StringBuilder sb = new StringBuilder("");
 
-        String largest = fruits[0];
+        char ch = Character.toUpperCase(str.charAt(0));
+        sb.append(ch);
 
-        for(int i = 1; i < fruits.length; i++){
-            if(largest.compareTo(fruits[i]) < 0){  
-        // if current 'largest' comes before fruits[i], update
-                largest = fruits[i];
+        for(int i=1; i<str.length(); i++){
+            if(str.charAt(i) == ' ' && i<str.length()-1){
+                sb.append(str.charAt(i));
+                i++;
+                sb.append(Character.toUpperCase(str.charAt(i)));
+            } else {
+                sb.append(str.charAt(i));
             }
         }
-        
-        System.out.println("Largest fruit (lexicographically): " + largest);
+        return sb.toString();
+    }
 
+    public static void main(String[] args){
+        String str = "hi, i am a learning java";
+        System.out.println(toUpperCase(str));
+
+
+        // StringBuilder sb = new StringBuilder(""); 
+        
+        // for(char ch = 'a'; ch <= 'z'; ch++){
+        //     sb.append(ch+" ");
+        // }
+
+        // sb.toString();
+
+        // System.out.println(sb);
+        // System.out.println(sb.length());
+
+
+        // largest value
+        // String fruits[] = {"apple", "mango", "banana"};
+
+        // String largest = fruits[0];
+
+        // for(int i = 1; i < fruits.length; i++){
+        //     if(largest.compareTo(fruits[i]) < 0){  
+        // // if current 'largest' comes before fruits[i], update
+        //         largest = fruits[i];
+        //     }
+        // }
+        
+        // System.out.println("Largest fruit (lexicographically): " + largest);
 
 
         // Substring using inbuilt function
