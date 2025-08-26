@@ -41,6 +41,7 @@ public class StringsProblems {
         return substr;
     }
 
+    // Capitalize each word
     public static String toUpperCase(String str){
         StringBuilder sb = new StringBuilder("");
 
@@ -59,9 +60,81 @@ public class StringsProblems {
         return sb.toString();
     }
 
+    // String Compression
+    public static String stringCompression(String str){
+        StringBuilder sb = new StringBuilder("");
+
+        char currChar = str.charAt(0);
+        int count = 1;
+
+        for(int i=1; i<str.length(); i++){
+            if(str.charAt(i) == currChar){
+                count++;
+            } else {
+                sb.append(currChar);
+                if(count > 1){
+                    sb.append(count);
+                }
+                currChar = str.charAt(i);
+                count = 1;
+            }
+        }
+        sb.append(currChar);
+        if(count > 1){
+            sb.append(count);
+        }
+        return sb.toString();
+    }
+
+    // Count lowercase vowels
+    public static int lowercaseVowels(String vowels){
+        int count = 0;
+
+        for(int i=0; i<vowels.length(); i++){
+            if(vowels.charAt(i) == 'a' || vowels.charAt(i) == 'e' || vowels.charAt(i) == 'i' || vowels.charAt(i) == 'o' || vowels.charAt(i) == 'u'){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    // Anagrams
+    public static boolean isAnagrams(String str, String str2) {
+        if (str.length() != str2.length()) {
+            return false;
+        } 
+    
+        char[] str1Array = str.toLowerCase().toCharArray();
+        char[] str2Array = str2.toLowerCase().toCharArray();
+    
+        Arrays.sort(str1Array);
+        Arrays.sort(str2Array);
+    
+        return Arrays.equals(str1Array, str2Array);
+    }
+
+
     public static void main(String[] args){
-        String str = "hi, i am a learning java";
-        System.out.println(toUpperCase(str));
+        
+        // Anagrams
+        // String str = "listen";
+        // String str2 = "silent";
+        // System.out.println(isAnagrams(str, str2));
+
+
+        // Count lowercase vowels
+        // Scanner sc = new Scanner(System.in);
+        // String vowels = sc.nextLine();
+        // System.out.println(lowercaseVowels(vowels));
+
+        // String Compression
+        // String str = "aaabbcccdd";
+        // System.out.println(stringCompression(str));
+
+
+        // Capitalize each word
+        // String str = "hi, i am a learning java";
+        // System.out.println(toUpperCase(str));
 
 
         // StringBuilder sb = new StringBuilder(""); 
