@@ -31,11 +31,20 @@ public class BitManipulation {
     }
 
 
+    // Clear Ith Bit
+    public static int ClearIthBit(int n, int i){
+        int bitMask = ~(1<<i);
+        return n & bitMask;
+    }
+
+
     public static void main(String[] args) {
 
+        // Clear Ith Bit
+        System.out.println(ClearIthBit(10, 1));
 
         // Set Ith Bit
-        System.out.println(setIthBit(10, 2));
+        // System.out.println(setIthBit(10, 2));
 
         // Get Ith Bit
         // System.out.println(getIthBit(10, 2));
