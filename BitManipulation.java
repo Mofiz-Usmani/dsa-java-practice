@@ -25,7 +25,7 @@ public class BitManipulation {
 
 
     // Set Ith Bit
-    public static int setItBit(int n, int i){
+    public static int setIthBit(int n, int i){
         int bitMask = 1<<i;
         return n | bitMask;
     }
@@ -35,7 +35,7 @@ public class BitManipulation {
 
 
         // Set Ith Bit
-        System.out.println(setItBit(10, 2));
+        System.out.println(setIthBit(10, 2));
 
         // Get Ith Bit
         // System.out.println(getIthBit(10, 2));
