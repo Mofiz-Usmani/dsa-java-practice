@@ -2,6 +2,7 @@ import java.util.*;
 
 public class BitManipulation {
 
+    // Odd or Even
     public static void oddOrEven(int n){
         int bitMask = 1;
         if((n & bitMask) == 0){
@@ -11,6 +12,7 @@ public class BitManipulation {
         }
     }
 
+    // Get Int Bit
     public static int getIthBit(int n, int i){
         int bitMask = 1<<i;
 
@@ -22,10 +24,21 @@ public class BitManipulation {
     }
 
 
+    // Set Ith Bit
+    public static int setItBit(int n, int i){
+        int bitMask = 1<<i;
+        return n | bitMask;
+    }
+
+
     public static void main(String[] args) {
-        System.out.println(getIthBit(10, 2));
 
 
+        // Set Ith Bit
+        System.out.println(setItBit(10, 2));
+
+        // Get Ith Bit
+        // System.out.println(getIthBit(10, 2));
 
         // Odd or Even
         // oddOrEven(3);
