@@ -37,11 +37,27 @@ public class BitManipulation {
         return n & bitMask;
     }
 
-
-    public static void main(String[] args) {
+    // Update Ith Bit
+    public static int updateIthBit(int n, int i, int newBit){
+        if(newBit == 0){
+            return ClearIthBit(n, i);
+        } else {
+            return setIthBit(n, i);
+        }
 
         // Clear Ith Bit
-        System.out.println(ClearIthBit(10, 1));
+        // n = ClearIthBit(n, i);
+        // int bitMask = newBit<<i;
+        // return n | bitMask;
+    }
+
+
+    public static void main(String[] args) {
+        // Update Ith Bit
+        System.out.println(updateIthBit(10, 2, 1));
+
+        // Clear Ith Bit
+        // System.out.println(ClearIthBit(10, 1));
 
         // Set Ith Bit
         // System.out.println(setIthBit(10, 2));
