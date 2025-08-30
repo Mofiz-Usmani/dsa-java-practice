@@ -39,16 +39,16 @@ public class BitManipulation {
 
     // Update Ith Bit
     public static int updateIthBit(int n, int i, int newBit){
-        if(newBit == 0){
-            return ClearIthBit(n, i);
-        } else {
-            return setIthBit(n, i);
-        }
+        // if(newBit == 0){
+        //     return ClearIthBit(n, i);
+        // } else {
+        //     return setIthBit(n, i);
+        // }
 
         // Clear Ith Bit
-        // n = ClearIthBit(n, i);
-        // int bitMask = newBit<<i;
-        // return n | bitMask;
+        n = ClearIthBit(n, i);
+        int bitMask = newBit<<i;
+        return n | bitMask;
     }
 
 
