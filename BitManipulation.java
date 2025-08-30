@@ -75,11 +75,23 @@ public class BitManipulation {
         }
     }
 
+    // Count Set Bits
+    public static int countSetBits(int n) {
+        int count = 0;
+        while (n > 0) {
+            count += (n & 1);
+            n >>= 1;
+        }
+        return count;
+    }
 
     public static void main(String[] args) {
 
+        // Count Set Bits
+        System.out.println(countSetBits(10));
+
         // Check if Power of Two
-        System.out.println(isPowerOfTwo(2));
+        // System.out.println(isPowerOfTwo(2));
 
         // Clear Bits In Range
         // System.out.println(clearBitsInRange(10, 2, 4));
