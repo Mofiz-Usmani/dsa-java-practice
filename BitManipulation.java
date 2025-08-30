@@ -88,7 +88,7 @@ public class BitManipulation {
     public static void main(String[] args) {
 
         // Count Set Bits
-        System.out.println(countSetBits(10));
+        // System.out.println(countSetBits(10));
 
         // Check if Power of Two
         // System.out.println(isPowerOfTwo(2));
