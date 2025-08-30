@@ -51,17 +51,29 @@ public class BitManipulation {
         // return n | bitMask;
     }
 
-
+    // Clear I Bits
     public static int clearIBits(int n,int i){
         int bitMask = (~0)<<i;
         return n & bitMask;
     }
 
 
+    // Clear Bits In Range
+    public static int clearBitsInRange(int n, int i, int j){
+        int a = (~0)<<(j+1);
+        int b = (1<<i) - 1;
+        int bitMask = a | b;
+        return n & bitMask;
+    }
+
+
     public static void main(String[] args) {
-        
+
+        // Clear Bits In Range
+        System.out.println(clearBitsInRange(10, 2, 4));
+
         // Clear I Bits
-        System.out.println(clearIBits(15, 2));
+        // System.out.println(clearIBits(15, 2));
 
         // Update Ith Bit
         // System.out.println(updateIthBit(10, 2, 0));
