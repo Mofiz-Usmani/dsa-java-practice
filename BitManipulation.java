@@ -39,22 +39,32 @@ public class BitManipulation {
 
     // Update Ith Bit
     public static int updateIthBit(int n, int i, int newBit){
-        // if(newBit == 0){
-        //     return ClearIthBit(n, i);
-        // } else {
-        //     return setIthBit(n, i);
-        // }
+        if(newBit == 0){
+            return ClearIthBit(n, i);
+        } else {
+            return setIthBit(n, i);
+        }
 
         // Clear Ith Bit
-        n = ClearIthBit(n, i);
-        int bitMask = newBit<<i;
-        return n | bitMask;
+        // n = ClearIthBit(n, i);
+        // int bitMask = newBit<<i;
+        // return n | bitMask;
+    }
+
+
+    public static int clearIBits(int n,int i){
+        int bitMask = (~0)<<i;
+        return n & bitMask;
     }
 
 
     public static void main(String[] args) {
+        
+        // Clear I Bits
+        System.out.println(clearIBits(15, 2));
+
         // Update Ith Bit
-        System.out.println(updateIthBit(10, 2, 1));
+        // System.out.println(updateIthBit(10, 2, 0));
 
         // Clear Ith Bit
         // System.out.println(ClearIthBit(10, 1));
