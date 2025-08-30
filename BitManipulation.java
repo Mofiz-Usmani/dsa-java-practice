@@ -66,11 +66,23 @@ public class BitManipulation {
         return n & bitMask;
     }
 
+    // Check if Power of Two
+    public static boolean isPowerOfTwo(int n) {
+        if((n&(n-1)) == 0 && n != 0 && n > 0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 
     public static void main(String[] args) {
 
+        // Check if Power of Two
+        System.out.println(isPowerOfTwo(2));
+
         // Clear Bits In Range
-        System.out.println(clearBitsInRange(10, 2, 4));
+        // System.out.println(clearBitsInRange(10, 2, 4));
 
         // Clear I Bits
         // System.out.println(clearIBits(15, 2));
