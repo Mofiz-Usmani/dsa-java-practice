@@ -85,10 +85,57 @@ public class BitManipulation {
         return count;
     }
 
+
+    // Fast Exponentiation
+    public static int fastExpo(int a, int n){
+        int ans = 1; 
+
+        while(n > 0){
+            if((n & 1) != 0){
+                ans = ans * a;
+            }
+            a = a * a; 
+            n = n>>1; 
+        }
+
+        return ans;
+    }
+
+
+    // Swapping without temp variable
+    public static void swap(int a, int b){
+        System.out.println("Before Swap: a = " + a + " b = " + b);
+        a = a ^ b;
+        b = a ^ b; // b = (a ^ b) ^ b = a
+        a = a ^ b; // a = (a ^ b) ^ a = b
+        System.out.println("After Swap: a = " + a + " b = " + b);
+    }
+
     public static void main(String[] args) {
 
+        for(char ch = 'A'; ch <= 'Z'; ch++){
+            System.out.print((char)(ch | ' '));
+        }
+
+
+        // Prints 
+        // int x = 6; 
+        // System.out.println(x + " + " + 1 + " is " + -~x);
+        // x = -4;
+        // System.out.println(x + " + " + 1 + " is " + -~x);
+        // x = 0;
+        // System.out.println(x + " + " + 1 + " is " + -~x);
+
+
+
+        // Swapping without temp variable
+        // swap(5, 10);
+
+        // Fast Exponentiation
+        // System.out.println(fastExpo(3, 5));
+
         // Count Set Bits
-        System.out.println(countSetBits(10));
+        // System.out.println(countSetBits(10));
 
         // Check if Power of Two
         // System.out.println(isPowerOfTwo(2));
