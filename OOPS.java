@@ -85,35 +85,66 @@
 
 
 
+// Types of Constructors
+// public class OOPS {
+//     public static void main(String[] args){
+//         Student s1 = new Student();
+//         Student s2 = new Student("Mofiz");
+//         Student s3 = new Student(12);
+//         System.out.println(s2.name);
+//         System.out.println(s3.roll);
+//     }
+// }
+
+
+// //Constructors
+// class Student {
+//     String name;
+//     int roll;
+
+//     // Non-parametrazied constructor
+//     Student(){
+//         System.out.println("constructor is called...");
+//     }
+
+//     // Parametarized Constructor
+//     Student(String name){
+//         this.name = name;
+//     }
+
+//     // Parametarized Constructor
+//     Student(int roll){
+//         this.roll = roll;
+//     }
+// }
+
 
 public class OOPS {
-    public static void main(String[] args){
+    public static void main (String[] args){
         Student s1 = new Student();
-        Student s2 = new Student("Mofiz");
-        Student s3 = new Student(12);
-        System.out.println(s2.name);
-        System.out.println(s3.roll);
+        s1.name = "mofiz";
+        s1.roll = 12;
+        s1.password = "abc";
+
+        Student s2 = new Student(s1);
+        s2.password = "xyz";
     }
 }
 
 
-//Constructors
 class Student {
     String name;
     int roll;
+    String password;
+    int marks[];
 
-    // Non-parametrazied constructor
+    Student(Student s1){
+        this.name = s1.name;
+        this.roll = s1.roll;
+    }
+
+
     Student(){
-        System.out.println("constructor is called...");
-    }
-
-    // Parametarized Constructor
-    Student(String name){
-        this.name = name;
-    }
-
-    // Parametarized Constructor
-    Student(int roll){
-        this.roll = roll;
+        System.out.println("Hello");
     }
 }
