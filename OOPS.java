@@ -88,8 +88,11 @@
 
 public class OOPS {
     public static void main(String[] args){
-        Student s1 = new Student("Mofiz");
-        System.out.println(s1.name);
+        Student s1 = new Student();
+        Student s2 = new Student("Mofiz");
+        Student s3 = new Student(12);
+        System.out.println(s2.name);
+        System.out.println(s3.roll);
     }
 }
 
@@ -99,7 +102,18 @@ class Student {
     String name;
     int roll;
 
+    // Non-parametrazied constructor
+    Student(){
+        System.out.println("constructor is called...");
+    }
+
+    // Parametarized Constructor
     Student(String name){
         this.name = name;
+    }
+
+    // Parametarized Constructor
+    Student(int roll){
+        this.roll = roll;
     }
 }
