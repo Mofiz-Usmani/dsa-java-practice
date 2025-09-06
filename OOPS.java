@@ -139,12 +139,14 @@ class Student {
     int marks[];
 
     Student(Student s1){
+        marks = new int[3];
         this.name = s1.name;
         this.roll = s1.roll;
     }
 
 
     Student(){
+        marks = new int[3];
         System.out.println("Hello");
     }
 }
