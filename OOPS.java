@@ -148,7 +148,7 @@ class Student {
     String password;
     int marks[];
 
-    // Copy Constructor
+    // Shallow Copy Constructor
     Student(Student s1){
         marks = new int[3];
         this.name = s1.name;
