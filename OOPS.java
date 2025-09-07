@@ -119,57 +119,59 @@
 // }
 
 
-public class OOPS {
-    public static void main (String[] args){
-        Student s1 = new Student();
-        s1.name = "mofiz";
-        s1.roll = 12;
-        s1.password = "abc";
-        s1.marks[0] = 90;
-        s1.marks[1] = 80;
-        s1.marks[2] = 70;
+
+// 
+// public class OOPS {
+//     public static void main (String[] args){
+//         Student s1 = new Student();
+//         s1.name = "mofiz";
+//         s1.roll = 12;
+//         s1.password = "abc";
+//         s1.marks[0] = 90;
+//         s1.marks[1] = 80;
+//         s1.marks[2] = 70;
         
-        // Deep copy constructor - creates a new Student object by copying-
-        // values from another Student object
-        Student s2 = new Student(s1); // 
-        s1.marks[2] = 90;
+//         // Deep copy constructor - creates a new Student object by copying-
+//         // values from another Student object
+//         Student s2 = new Student(s1); // 
+//         s1.marks[2] = 90;
 
 
-        for(int i=0; i<3; i++){
-            System.out.println(s2.marks[i]);
-        }
-    }
-}
+//         for(int i=0; i<3; i++){
+//             System.out.println(s2.marks[i]);
+//         }
+//     }
+// }
 
 
-class Student {
-    String name;
-    int roll;
-    String password;
-    int marks[];
+// class Student {
+//     String name;
+//     int roll;
+//     String password;
+//     int marks[];
 
-    // Shallow Copy Constructor
-    // Student(Student s1){
-    //     marks = new int[3];
-    //     this.name = s1.name;
-    //     this.roll = s1.roll;
-    //     this.marks = s1.marks;
-    // }
-
-
-    // Deep Copy Constructor
-    Student(Student s1){
-        marks = new int[3];
-        this.name = s1.name;
-        this.roll = s1.roll;
-        for(int i=0; i<marks.length; i++){
-            this.marks[i] = s1.marks[i]; 
-        }
-    }
+//     // Shallow Copy Constructor
+//     // Student(Student s1){
+//     //     marks = new int[3];
+//     //     this.name = s1.name;
+//     //     this.roll = s1.roll;
+//     //     this.marks = s1.marks;
+//     // }
 
 
-    Student(){
-        marks = new int[3];
-        System.out.println("Hello");
-    }
-}
+//     // Deep Copy Constructor
+//     Student(Student s1){
+//         marks = new int[3];
+//         this.name = s1.name;
+//         this.roll = s1.roll;
+//         for(int i=0; i<marks.length; i++){
+//             this.marks[i] = s1.marks[i]; 
+//         }
+//     }
+
+
+//     Student(){
+//         marks = new int[3];
+//         System.out.println("Hello");
+//     }
+// }
