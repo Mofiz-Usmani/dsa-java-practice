@@ -182,7 +182,8 @@
 
 public class OOPS {
     public static void main(String[] args){
-
+        Fish shark = new Fish();
+        shark.eat();
     }
 }
 
@@ -202,7 +203,7 @@ class Animal {
 
 
 // Derived Class 
-class fish extends Animal {
+class Fish extends Animal {
     int fins;
 
     void swim(){
