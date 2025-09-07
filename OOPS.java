@@ -175,3 +175,37 @@
 //         System.out.println("Hello");
 //     }
 // }
+
+
+
+// Inheritance
+
+public class OOPS {
+    public static void main(String[] args){
+
+    }
+}
+
+
+// Base Class
+class Animal {
+    String color;
+
+    void eat() {
+        System.out.println("Eats");
+    }
+
+    void breathe() {
+        System.out.println("Breathes");
+    }
+}
+
+
+// Derived Class 
+class fish extends Animal {
+    int fins;
+
+    void swim(){
+        System.out.println("Swims in water");
+    }
+}
