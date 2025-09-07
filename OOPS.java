@@ -178,37 +178,74 @@
 
 
 
-// Inheritance
 
+// // Inheritance   (Single Level)
+// public class OOPS {
+//     public static void main(String[] args){
+//         Fish shark = new Fish();
+//         shark.color = "Golden";
+//         shark.eat();
+//         System.out.println(shark.color);
+//     }
+// }
+
+
+// // Base Class
+// class Animal {
+//     String color;
+
+//     void eat() {
+//         System.out.println("Eats");
+//     }
+
+//     void breathe() {
+//         System.out.println("Breathes");
+//     }
+// }
+
+
+// // Derived Class 
+// class Fish extends Animal {
+//     int fins;
+
+//     void swim(){
+//         System.out.println("Swims in water");
+//     }
+// }
+
+
+
+
+
+// Inheritance   (Multilevel Inheritance)
 public class OOPS {
-    public static void main(String[] args){
-        Fish shark = new Fish();
-        shark.color = "Golden";
-        shark.eat();
-        System.out.println(shark.color);
+    public static void main(String[] args) {
+        Shark s = new Shark();
+
+        s.eat();    // from Animal
+        s.swim();   // from Fish
+        s.attack(); // from Shark
     }
 }
 
 
 // Base Class
 class Animal {
-    String color;
-
     void eat() {
-        System.out.println("Eats");
-    }
-
-    void breathe() {
-        System.out.println("Breathes");
+        System.out.println("Eats food");
     }
 }
 
-
-// Derived Class 
+// Derived Class 1
 class Fish extends Animal {
-    int fins;
-
-    void swim(){
+    void swim() {
         System.out.println("Swims in water");
+    }
+}
+
+// Derived Class 2 (inherits Fish, which inherits Animal)
+class Shark extends Fish {
+    void attack() {
+        System.out.println("Attacks other fish");
     }
 }
