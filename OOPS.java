@@ -218,34 +218,85 @@
 
 
 // Inheritance   (Multilevel Inheritance)
-public class OOPS {
-    public static void main(String[] args) {
-        Shark s = new Shark();
+// public class OOPS {
+//     public static void main(String[] args) {
+//         Shark s = new Shark();
 
-        s.eat();    // from Animal
-        s.swim();   // from Fish
-        s.attack(); // from Shark
+//         s.eat();    // from Animal
+//         s.swim();   // from Fish
+//         s.attack(); // from Shark
+//     }
+// }
+
+
+// // Base Class
+// class Animal {
+//     void eat() {
+//         System.out.println("Eats food");
+//     }
+// }
+
+// // Derived Class 1
+// class Fish extends Animal {
+//     void swim() {
+//         System.out.println("Swims in water");
+//     }
+// }
+
+// // Derived Class 2 (inherits Fish, which inherits Animal)
+// class Shark extends Fish {
+//     void attack() {
+//         System.out.println("Attacks other fish");
+//     }
+// }
+
+
+
+
+
+// Inheritance  (Hierarchial Inheritance)
+public class OOPS {
+    public static void main(String[] args){
+         Dog d = new Dog();
+        d.eat();  // from Animal
+        d.bark(); // from Dog
+
+        Cat c = new Cat();
+        c.eat();  // from Animal
+        c.meow(); // from Cat
+
+        Fish f = new Fish();
+        f.eat();  // from Animal
+        f.swim(); // from Fish
     }
 }
 
 
-// Base Class
+
+// Base Class (Parent)
 class Animal {
     void eat() {
         System.out.println("Eats food");
     }
 }
 
-// Derived Class 1
-class Fish extends Animal {
-    void swim() {
-        System.out.println("Swims in water");
+// Child 1
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barks loudly");
     }
 }
 
-// Derived Class 2 (inherits Fish, which inherits Animal)
-class Shark extends Fish {
-    void attack() {
-        System.out.println("Attacks other fish");
+// Child 2
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Meows softly");
+    }
+}
+
+// Child 3
+class Fish extends Animal {
+    void swim() {
+        System.out.println("Swims in water");
     }
 }
