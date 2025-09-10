@@ -483,7 +483,6 @@
 
 
 
-
 // Interfaces in Java
 interface Animal {
     void eat();
