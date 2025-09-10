@@ -255,48 +255,130 @@
 
 
 // Inheritance  (Hierarchial Inheritance)
-public class OOPS {
-    public static void main(String[] args){
-         Dog d = new Dog();
-        d.eat();  // from Animal
-        d.bark(); // from Dog
+// public class OOPS {
+//     public static void main(String[] args){
+//          Dog d = new Dog();
+//         d.eat();  // from Animal
+//         d.bark(); // from Dog
 
-        Cat c = new Cat();
-        c.eat();  // from Animal
-        c.meow(); // from Cat
+//         Cat c = new Cat();
+//         c.eat();  // from Animal
+//         c.meow(); // from Cat
 
-        Fish f = new Fish();
-        f.eat();  // from Animal
-        f.swim(); // from Fish
+//         Fish f = new Fish();
+//         f.eat();  // from Animal
+//         f.swim(); // from Fish
+//     }
+// }
+
+
+
+// // Base Class (Parent)
+// class Animal {
+//     void eat() {
+//         System.out.println("Eats food");
+//     }
+// }
+
+// // Child 1
+// class Dog extends Animal {
+//     void bark() {
+//         System.out.println("Barks loudly");
+//     }
+// }
+
+// // Child 2
+// class Cat extends Animal {
+//     void meow() {
+//         System.out.println("Meows softly");
+//     }
+// }
+
+// // Child 3
+// class Fish extends Animal {
+//     void swim() {
+//         System.out.println("Swims in water");
+//     }
+// }
+
+
+
+
+
+
+
+
+// Method Overloading
+// public class OOPS {
+//     public static void main(String[] args) {
+//         Calculator c = new Calculator();
+//         System.out.println(c.add(5, 10));      // calls int version
+//         System.out.println(c.add(5.5, 10.5)); // calls double version
+//     }
+// }
+
+
+// class Calculator {
+//     int add(int a, int b) {
+//         return a + b;
+//     }
+
+//     double add(double a, double b) {
+//         return a + b;
+//     }
+// }
+
+
+
+
+
+
+
+// Method Overriding
+// public class OOPS {
+//     public static void main(String[] args) {
+//         Animal a;
+//         a = new Animal();
+//         a.sound();
+//         a = new Dog();
+//         a.sound(); // Dog barks (runtime decision)
+
+//         a = new Cat();
+//         a.sound(); // Cat meows
+//     }
+// }
+
+
+// class Animal {
+//     void sound() {
+//         System.out.println("Animal makes a sound");
+//     }
+// }
+
+// class Dog extends Animal {
+//     void sound() {
+//         System.out.println("Dog barks");
+//     }
+// }
+
+// class Cat extends Animal {
+//     void sound() {
+//         System.out.println("Cat meows");
+//     }
+// }
+
+
+
+
+
+// User Defined Package
+import mypack.MyClass;  // import the package
+
+class OOPS {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.display();
     }
 }
 
 
-
-// Base Class (Parent)
-class Animal {
-    void eat() {
-        System.out.println("Eats food");
-    }
-}
-
-// Child 1
-class Dog extends Animal {
-    void bark() {
-        System.out.println("Barks loudly");
-    }
-}
-
-// Child 2
-class Cat extends Animal {
-    void meow() {
-        System.out.println("Meows softly");
-    }
-}
-
-// Child 3
-class Fish extends Animal {
-    void swim() {
-        System.out.println("Swims in water");
-    }
-}
