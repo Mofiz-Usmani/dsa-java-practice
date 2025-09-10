@@ -372,13 +372,48 @@
 
 
 // User Defined Package
-import mypack.MyClass;  // import the package
+// import mypack.MyClass;  // import the package
 
-class OOPS {
+// class OOPS {
+//     public static void main(String[] args) {
+//         MyClass obj = new MyClass();
+//         obj.display();
+//     }
+// }
+
+
+
+
+
+
+// Abstraction in Java
+public class OOPS {
     public static void main(String[] args) {
-        MyClass obj = new MyClass();
-        obj.display();
+        
     }
 }
 
 
+abstract class Animal {
+    // normal method
+    void eat(){
+        System.out.println("Animal Eats");
+    }
+    
+    // abstract method (no body)
+    abstract void walk();
+}
+
+
+class Horse extends Animal {
+    void walk(){
+        System.out.println("Walks on 4 legs");
+    }
+}
+
+
+class Chicken extends Animal {
+    void walk(){
+        System.out.println("Walks on 2 legs");
+    }
+}
