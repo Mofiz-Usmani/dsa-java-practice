@@ -387,93 +387,125 @@
 
 
 // Abstraction in Java
+// public class OOPS {
+//     public static void main(String[] args) {
+//         // Creating Horse object with default constructor
+//         Horse h1 = new Horse();  
+//         h1.eat();   // Calls normal method from Animal
+//         h1.walk();  // Calls Horse's implementation of walk()
+
+//         // Creating Horse object with parameterized constructor
+//         Horse h2 = new Horse("Chetak");  
+//         h2.eat();
+//         h2.walk();
+
+//         // Creating Chicken object with default constructor
+//         Chicken c1 = new Chicken();  
+//         c1.eat();
+//         c1.walk();
+
+//         // Creating Chicken object with parameterized constructor
+//         Chicken c2 = new Chicken("Lucy");
+//         c2.eat();
+//         c2.walk();
+//     }
+// }
+
+
+// // ----------------- ABSTRACT CLASS -----------------
+// abstract class Animal {
+//     String name;
+
+//     // Default constructor (no arguments)
+//     Animal() {
+//         System.out.println("Animal default constructor called");
+//     }
+
+//     // Parameterized constructor (initializes common property)
+//     Animal(String name) {
+//         this.name = name;
+//         System.out.println("Animal parameterized constructor: " + name);
+//     }
+
+//     // Normal (concrete) method
+//     void eat() {
+//         System.out.println("Animal Eats");
+//     }
+
+//     // Abstract method (must be implemented by subclasses)
+//     abstract void walk();
+// }
+
+
+// // ----------------- HORSE CLASS -----------------
+// class Horse extends Animal {
+//     // Default constructor
+//     Horse() {
+//         // super() is automatically called here (Animal's default constructor)
+//         System.out.println("Horse constructor called");
+//     }
+
+//     // Parameterized constructor
+//     Horse(String name) {
+//         super(name); // Calls Animal(String name)
+//         System.out.println("Horse parameterized constructor called");
+//     }
+
+//     // Implementing abstract method
+//     void walk() {
+//         System.out.println("Horse walks on 4 legs");
+//     }
+// }
+
+
+// // ----------------- CHICKEN CLASS -----------------
+// class Chicken extends Animal {
+//     // Default constructor
+//     Chicken() {
+//         // super() is automatically called here (Animal's default constructor)
+//         System.out.println("Chicken constructor called");
+//     }
+
+//     // Parameterized constructor
+//     Chicken(String name) {
+//         super(name); // Calls Animal(String name)
+//         System.out.println("Chicken parameterized constructor called");
+//     }
+
+//     // Implementing abstract method
+//     void walk() {
+//         System.out.println("Chicken walks on 2 legs");
+//     }
+// }
+
+
+
+
+
+
+
+// Interfaces in Java
+interface Animal {
+    void eat();
+}
+
+interface Pet {
+    void play();
+}
+
+class Dog implements Animal, Pet {
+    public void eat() {
+        System.out.println("Dog eats bone.");
+    }
+    public void play() {
+        System.out.println("Dog plays fetch.");
+    }
+}
+
 public class OOPS {
     public static void main(String[] args) {
-        // Creating Horse object with default constructor
-        Horse h1 = new Horse();  
-        h1.eat();   // Calls normal method from Animal
-        h1.walk();  // Calls Horse's implementation of walk()
-
-        // Creating Horse object with parameterized constructor
-        Horse h2 = new Horse("Chetak");  
-        h2.eat();
-        h2.walk();
-
-        // Creating Chicken object with default constructor
-        Chicken c1 = new Chicken();  
-        c1.eat();
-        c1.walk();
-
-        // Creating Chicken object with parameterized constructor
-        Chicken c2 = new Chicken("Lucy");
-        c2.eat();
-        c2.walk();
-    }
-}
-
-
-// ----------------- ABSTRACT CLASS -----------------
-abstract class Animal {
-    String name;
-
-    // Default constructor (no arguments)
-    Animal() {
-        System.out.println("Animal default constructor called");
-    }
-
-    // Parameterized constructor (initializes common property)
-    Animal(String name) {
-        this.name = name;
-        System.out.println("Animal parameterized constructor: " + name);
-    }
-
-    // Normal (concrete) method
-    void eat() {
-        System.out.println("Animal Eats");
-    }
-
-    // Abstract method (must be implemented by subclasses)
-    abstract void walk();
-}
-
-
-// ----------------- HORSE CLASS -----------------
-class Horse extends Animal {
-    // Default constructor
-    Horse() {
-        // super() is automatically called here (Animal's default constructor)
-        System.out.println("Horse constructor called");
-    }
-
-    // Parameterized constructor
-    Horse(String name) {
-        super(name); // Calls Animal(String name)
-        System.out.println("Horse parameterized constructor called");
-    }
-
-    // Implementing abstract method
-    void walk() {
-        System.out.println("Horse walks on 4 legs");
-    }
-}
-
-
-// ----------------- CHICKEN CLASS -----------------
-class Chicken extends Animal {
-    // Default constructor
-    Chicken() {
-        // super() is automatically called here (Animal's default constructor)
-        System.out.println("Chicken constructor called");
-    }
-
-    // Parameterized constructor
-    Chicken(String name) {
-        super(name); // Calls Animal(String name)
-        System.out.println("Chicken parameterized constructor called");
-    }
-
-    // Implementing abstract method
-    void walk() {
-        System.out.println("Chicken walks on 2 legs");
+        Dog d = new Dog();
+        d.eat();
+        d.play();
     }
 }
