@@ -484,27 +484,176 @@
 
 
 // Interfaces in Java
-interface Animal {
-    void eat();
-}
+// interface Animal {
+//     void eat();
+// }
 
-interface Pet {
-    void play();
-}
+// interface Pet {
+//     void play();
+// }
 
-class Dog implements Animal, Pet {
-    public void eat() {
-        System.out.println("Dog eats bone.");
-    }
-    public void play() {
-        System.out.println("Dog plays fetch.");
-    }
-}
+// class Dog implements Animal, Pet {
+//     public void eat() {
+//         System.out.println("Dog eats bone.");
+//     }
+//     public void play() {
+//         System.out.println("Dog plays fetch.");
+//     }
+// }
 
-public class OOPS {
-    public static void main(String[] args) {
-        Dog d = new Dog();
-        d.eat();
-        d.play();
-    }
-}
+// public class OOPS {
+//     public static void main(String[] args) {
+//         Dog d = new Dog();
+//         d.eat();
+//         d.play();
+//     }
+// }
+
+
+
+
+
+
+// Static Keyword
+// public class OOPS {
+//     public static void main(String[] args) {
+//         Student s1 = new Student();
+//         s1.schoolName = "St.Xavier";
+
+//         Student s2 = new Student();
+//         System.out.println(s2.schoolName);
+
+//         Student s3 = new Student();
+//         s3.schoolName = "HEllo";
+//         System.out.println(s3.schoolName);
+
+//         System.out.println(s1.returnPercentage(60, 85, 90));
+//     }
+// }
+
+
+// class Student {
+//     // Static Method
+//     static int returnPercentage(int math, int phy, int chem){
+//         return (math + phy + chem) / 3;
+//     }
+
+//     String name;
+//     int roll;
+
+//     static String schoolName;
+
+//     void setName(String name){
+//         this.name = name;
+//     }
+
+//     String getName(){
+//         return this.name;
+//     }
+// }
+
+
+
+
+
+
+
+// Super Keyword (Access parent class variables (if child has same name))
+// If a child class defines a variable with the same name as parent, super helps avoid ambiguity.
+// class Animal {
+//     String color = "Brown";
+// }
+
+// class Dog extends Animal {
+//     String color = "Black";
+    
+//     void printColor() {
+//         System.out.println(color);       // Black (child)
+//         System.out.println(super.color); // Brown (parent)
+//     }
+// }
+
+// class OOPS {
+//     public static void main(String[] args) {
+//         Dog d = new Dog();
+//         d.printColor();
+//     }
+// }
+
+
+
+// Super Keyword (Call parent class constructor)
+// super() is used to call the parent’s constructor. This must be the first statement inside child constructor.
+// class Animal {
+//     Animal(String name) {
+//         System.out.println("Animal constructor: " + name);
+//     }
+// }
+
+// class Dog extends Animal {
+//     Dog(String name) {
+//         super(name);  // call parent constructor
+//         System.out.println("Dog constructor: " + name);
+//     }
+// }
+
+// class OOPS {
+//     public static void main(String[] args) {
+//         Dog d = new Dog("Tommy");
+//     }
+// }
+
+
+
+
+
+// Super Keyword (Call parent class methods)
+// If a child overrides a method, you can still call the parent’s method using super.
+// class Animal {
+//     void eat() {
+//         System.out.println("Animal eats");
+//     }
+// }
+
+// class Dog extends Animal {
+//     void eat() {
+//         System.out.println("Dog eats bones");
+//     }
+    
+//     void print() {
+//         eat();        // Calls Dog's method (overridden)
+//         super.eat();  // Calls Animal's method
+//     }
+// }
+
+// public class OOPS {
+//     public static void main(String[] args) {
+//         Dog d = new Dog();   // Create Dog object
+//         d.print();           // Call print()
+//     }
+// }
+
+
+
+
+
+// Practice Question 1:
+// class Student {
+//     String name;
+//     int marks;
+// }
+
+// public class OOPS {
+//     public static void main(String[] args) {
+//         Student c = new Student();
+//         c.name = "Jack";
+//         System.out.println(c.name);
+//     }
+// }
+
+
+
+
+
+// Practice Question 2:
+
