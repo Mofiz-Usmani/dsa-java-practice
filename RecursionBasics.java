@@ -70,6 +70,20 @@ public class RecursionBasics {
         return isSorted(arr, i+1);
     }
 
+
+    // WAF to find the first Occurance of an element in an array
+    public static int firstOccurnace(int arr[], int key, int i){
+        if(i == arr.length){
+            return -1;
+        }
+
+        if(arr[i] == key){
+            return i;
+        }
+
+        return firstOccurnace(arr, key, i+1);
+    }
+
     public static void main(String[] args) {
         // int n = 5;
         // printDec(n);
@@ -78,6 +92,7 @@ public class RecursionBasics {
         // System.out.println(calcSum(n));
         // System.out.println(fib(n)); (https://chatgpt.com/s/t_68c3c11dfed88191a148d2e4d4bc8dc9)
         int arr[] = {1, 2, 3, 4, 5};
-        System.out.println(isSorted(arr, 0));
+        // System.out.println(isSorted(arr, 0));
+        System.out.println(firstOccurnace(arr, 5, 0));
     }
 }
