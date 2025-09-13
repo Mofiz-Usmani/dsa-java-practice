@@ -99,6 +99,35 @@ public class RecursionBasics {
         return isFound;
     }
 
+
+    // Print x^n 
+    public static int power(int x, int n){
+        if(n == 0){
+            return 1;
+        }
+
+        int xnm1 = power(x, n-1);
+        int xn = x * xnm1;
+        return xn;
+    }
+
+
+
+    // Optimized x^n
+    public static int optimizedPower(int x, int n) {
+    if (n == 0) return 1;
+
+    int half = optimizedPower(x, n/2);
+
+    if (n % 2 == 0) {
+        return half * half;
+    } else {
+        return x * half * half;
+    }
+
+    }
+
+
     public static void main(String[] args) {
         // int n = 5;
         // printDec(n);
@@ -106,9 +135,11 @@ public class RecursionBasics {
         // System.out.println(fact(n));
         // System.out.println(calcSum(n));
         // System.out.println(fib(n)); (https://chatgpt.com/s/t_68c3c11dfed88191a148d2e4d4bc8dc9)
-        int arr[] = {8, 3, 6, 9, 5, 10, 2, 5, 3};
+        // int arr[] = {8, 3, 6, 9, 5, 10, 2, 5, 3};
         // System.out.println(isSorted(arr, 0));
         // System.out.println(firstOccurnace(arr, 5, 0));
-        System.out.println(lastOccurance(arr, 3, 0));
+        // System.out.println(lastOccurance(arr, 3, 0));
+        // System.out.println(power(2, 4));
+        System.out.println(optimizedPower(2, 3));
     }
 }
