@@ -124,7 +124,25 @@ public class RecursionBasics {
     } else {
         return x * half * half;
     }
+    }
 
+
+
+    // Tiling Problem
+    public static int tilingProblem(int n){
+
+        if(n == 0 || n == 1){
+            return 1;
+        }
+
+        // Vertical Choice
+        int fnm1 = tilingProblem(n-1);
+
+        // Horizontal Choice
+        int fnm2 = tilingProblem(n-2);
+
+        int totWays = fnm1 + fnm2;
+        return totWays;
     }
 
 
@@ -140,6 +158,7 @@ public class RecursionBasics {
         // System.out.println(firstOccurnace(arr, 5, 0));
         // System.out.println(lastOccurance(arr, 3, 0));
         // System.out.println(power(2, 4));
-        System.out.println(optimizedPower(2, 3));
+        // System.out.println(optimizedPower(2, 3));
+        System.out.println(tilingProblem(2));
     }
 }
