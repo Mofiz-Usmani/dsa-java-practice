@@ -146,6 +146,25 @@ public class RecursionBasics {
     }
 
 
+
+
+    // Remove Duplicates from a string
+    public static void removeDuplicates(String str, int idx, StringBuilder newStr, boolean map[]){
+        if(idx == str.length()){
+            System.out.println(newStr);
+            return;
+        }
+
+        char currChar = str.charAt(idx);
+        if(map[currChar-'a'] == true) {
+            removeDuplicates(str, idx+1, newStr, map);
+        } else {
+            map[currChar-'a'] = true;
+            removeDuplicates(str, idx+1, newStr.append(currChar), map);
+        }
+    }
+
+
     public static void main(String[] args) {
         // int n = 5;
         // printDec(n);
@@ -161,5 +180,8 @@ public class RecursionBasics {
         // System.out.println(optimizedPower(2, 3));
         // System.out.println(tilingProblem(2));
         // https://chatgpt.com/s/t_68ca4d8b37208191ae600298bac0a539
+
+        String str = "appnnacollege";
+        removeDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
     }
 }
