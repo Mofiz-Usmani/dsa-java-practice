@@ -176,6 +176,23 @@ public class RecursionBasics {
     }
 
 
+
+
+    // Binary Strings Problem
+    public static void printBinStrings(int n, int lastPlace, String str){
+        if(n == 0){
+            System.out.println(str);
+            return;
+        }
+
+        printBinStrings(n-1, 0, str+"0");
+
+        if(lastPlace == 0){
+            printBinStrings(n-1, 1, str+"1");
+        }
+    }
+
+
     public static void main(String[] args) {
         // int n = 5;
         // printDec(n);
@@ -195,6 +212,9 @@ public class RecursionBasics {
         // String str = "appnnacollege";
         // removeDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
 
-        System.out.println(friendsPairing(3));
+        // System.out.println(friendsPairing(3));
+        // https://chatgpt.com/s/t_68cd2e420c148191bff3707b687e702a
+
+        printBinStrings(3, 0, "");
     }
 }
