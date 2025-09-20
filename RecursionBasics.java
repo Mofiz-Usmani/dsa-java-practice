@@ -215,6 +215,7 @@ public class RecursionBasics {
         // System.out.println(friendsPairing(3));
         // https://chatgpt.com/s/t_68cd2e420c148191bff3707b687e702a
 
-        printBinStrings(3, 0, "");
+        // printBinStrings(3, 0, "");
+        // https://chatgpt.com/s/t_68ce4d18191c8191ae24b3a455d31d35
     }
 }
