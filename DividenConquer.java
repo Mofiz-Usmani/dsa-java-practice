@@ -8,49 +8,61 @@ public class DividenConquer {
     }
 
 
-    public static void mergeSort(int arr[], int si, int ei){
-        if(si >= ei) {
-            return;
-        }
-
-
-        int mid = si + (ei - si)/2;
-        mergeSort(arr, si, mid);
-        mergeSort(arr, mid+1, ei);
-        merge(arr, si, mid, ei);
+    public static void mergeSort(int arr[], int si, int ei) {
+    // Base case: if there is only 1 element or invalid range, return
+    if (si >= ei) {
+        return;
     }
 
-    public static void merge(int arr[], int si, int mid, int ei){
-        int temp[] = new int[ei-si+1];
-        int i = si;
-        int j = mid + 1;
-        int k = 0; 
+    // Find the middle index
+    int mid = si + (ei - si) / 2;
 
+    // Recursively sort the left half
+    mergeSort(arr, si, mid);
 
-        while(i <= mid && j <= ei) {
-            if(arr[i] < arr[j]) {
-                temp[k] = arr[i];
-                i++;
-            } else {
-                temp[k] = arr[j];
-                j++; 
-            }
-            k++;
+    // Recursively sort the right half
+    mergeSort(arr, mid + 1, ei);
+
+    // Merge the two sorted halves
+    merge(arr, si, mid, ei);
+}
+
+public static void merge(int arr[], int si, int mid, int ei) {
+    // Temporary array to store merged result
+    int temp[] = new int[ei - si + 1];
+
+    int i = si;      // iterator for left part
+    int j = mid + 1; // iterator for right part
+    int k = 0;       // iterator for temp part
+
+    // Compare and copy smaller element from both parts to temp
+    while (i <= mid && j <= ei) {
+        if (arr[i] < arr[j]) {
+            temp[k] = arr[i];
+            i++;
+        } else {
+            temp[k] = arr[j];
+            j++;
         }
-
-        while(i <= mid){
-            temp[k++] = arr[i++];
-        }
-
-
-        while(j <= ei){
-            temp[k++] = arr[j++];
-        }
-
-        for(k = 0, i = si; k < temp.length; k++, i++){
-            arr[i] = temp[k];
-        }
+        k++;
     }
+
+    // Copy remaining elements from left half (if any)
+    while (i <= mid) {
+        temp[k++] = arr[i++];
+    }
+
+    // Copy remaining elements from right half (if any)
+    while (j <= ei) {
+        temp[k++] = arr[j++];
+    }
+
+    // Copy sorted elements back into original array
+    for (k = 0, i = si; k < temp.length; k++, i++) {
+        arr[i] = temp[k];
+    }
+}
+
 
 
     public static void main(String[] args) {
