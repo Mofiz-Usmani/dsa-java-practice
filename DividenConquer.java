@@ -140,10 +140,11 @@ public class DividenConquer {
     }
 
     public static void main(String[] args) {
-        int arr[] = {4, 5, 6, 7, 0, 1, 2};
-        int tar = 6;
-        int ans = search(arr, tar, 0, arr.length - 1);
-        System.out.println(ans);
+        // int arr[] = {4, 5, 6, 7, 0, 1, 2};
+        // int tar = 6;
+        // int ans = search(arr, tar, 0, arr.length - 1);
+        // System.out.println(ans);
+        // https://chatgpt.com/s/t_68d23b2a254c819197f4c1f8dbf4aa24
 
 
         // int arr[] = {6, 3, 9, 8, 2, 5};
