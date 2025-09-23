@@ -64,6 +64,7 @@ public class DividenConquer {
     }
 
 
+    // Quick Sort
     public static void quickSort(int arr[], int si, int ei) {
         // Base case: if there is only 1 element or invalid range, return
         if (si >= ei) {
@@ -109,6 +110,7 @@ public class DividenConquer {
         int arr[] = {6, 3, 9, 8, 2, 5};
         quickSort(arr, 0, arr.length - 1);
         printArr(arr);
+        // https://chatgpt.com/s/t_68d22ca60bec819188c4a3a344d8148f
 
         // int arr[] = {6, 3, 9, 5, 2, 8};
         // mergeSort(arr, 0, arr.length-1);
