@@ -81,7 +81,7 @@ public class DividenConquer {
         quickSort(arr, pIdx + 1, ei);
     }
 
-
+    // Partition function to place pivot in correct position (Quick Sort)
     public static int partition(int arr[], int si, int ei) {
     int pivot = arr[ei];  // last element as pivot
     int i = si - 1;       // boundary for smaller elements
@@ -106,10 +106,49 @@ public class DividenConquer {
 
 
 
+   // Search in a sorted and rotated array
+     public static int search(int arr[], int tar, int si, int ei) {
+        if (si > ei) {  // base case: not found
+            return -1;
+        }
+
+        int mid = si + (ei - si) / 2;
+
+        // Check if mid is the target
+        if (arr[mid] == tar) {
+            return mid;
+        }
+
+        // Check which side is properly sorted
+        if (arr[si] <= arr[mid]) {  // left half is sorted
+            if (tar >= arr[si] && tar < arr[mid]) {
+                // Target is in left half
+                return search(arr, tar, si, mid - 1);
+            } else {
+                // Target is in right half
+                return search(arr, tar, mid + 1, ei);
+            }
+        } else {  // right half is sorted
+            if (tar > arr[mid] && tar <= arr[ei]) {
+                // Target is in right half
+                return search(arr, tar, mid + 1, ei);
+            } else {
+                // Target is in left half
+                return search(arr, tar, si, mid - 1);
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        int arr[] = {6, 3, 9, 8, 2, 5};
-        quickSort(arr, 0, arr.length - 1);
-        printArr(arr);
+        int arr[] = {4, 5, 6, 7, 0, 1, 2};
+        int tar = 6;
+        int ans = search(arr, tar, 0, arr.length - 1);
+        System.out.println(ans);
+
+
+        // int arr[] = {6, 3, 9, 8, 2, 5};
+        // quickSort(arr, 0, arr.length - 1);
+        // printArr(arr);
         // https://chatgpt.com/s/t_68d22ca60bec819188c4a3a344d8148f
 
         // int arr[] = {6, 3, 9, 5, 2, 8};
