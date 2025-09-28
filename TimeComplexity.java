@@ -61,6 +61,17 @@ public class TimeComplexity {
 
         return n * fact(n-1);
     }
+
+
+
+    // Sum of n 
+    public static int sumOfn(int n){
+        if(n == 0){
+            return 0;
+        }
+
+        return n + sumOfn(n-1);
+    }
     public static void main(String[] args){
         // int arr[] = {5, 4, 3, 2, 1};
         // bubbleSort(arr);
@@ -79,6 +90,10 @@ public class TimeComplexity {
         // }
 
 
-        System.out.println(fact(4));
+        // System.out.println(fact(4));
+
+
+
+        System.out.println(sumOfn(4));
     }
 }
