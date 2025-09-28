@@ -51,6 +51,16 @@ public class TimeComplexity {
         }
         return -1;
     }
+
+
+    // Factorial 
+    public static int fact(int n){
+        if(n == 0){
+            return 1;
+        }
+
+        return n * fact(n-1);
+    }
     public static void main(String[] args){
         // int arr[] = {5, 4, 3, 2, 1};
         // bubbleSort(arr);
@@ -58,14 +68,17 @@ public class TimeComplexity {
         //     System.out.print(arr[i] + " ");
         // }
 
-        int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int key = 8;
-         int result = binSearch(arr, key);
+        // int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        // int key = 8;
+        //  int result = binSearch(arr, key);
 
-        if (result == -1) {
-            System.out.println("Element not found.");
-        } else {
-            System.out.println("Element " + key + " found at index: " + result);
-        }
+        // if (result == -1) {
+        //     System.out.println("Element not found.");
+        // } else {
+        //     System.out.println("Element " + key + " found at index: " + result);
+        // }
+
+
+        System.out.println(fact(4));
     }
 }
