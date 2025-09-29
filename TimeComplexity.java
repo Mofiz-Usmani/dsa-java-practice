@@ -1,4 +1,13 @@
+import java.util.concurrent.SynchronousQueue;
+
 public class TimeComplexity {
+
+    public static void printArr(int arr[]){
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
 
     public static void bubbleSort(int arr[]){
         for(int turn=0; turn<arr.length-1; turn++){
@@ -72,6 +81,78 @@ public class TimeComplexity {
 
         return n + sumOfn(n-1);
     }
+
+
+
+    // Fibonacci 
+    public static int fib(int n){
+        if(n == 0 || n == 1){
+            return n;
+        }
+        return fib(n-1) + fib(n-2);
+    } 
+
+
+
+    public static void mergeSort(int arr[], int si, int ei){
+        if(si >= ei) {
+            return;
+        }
+
+        int mid = si + (ei - si)/2;
+        mergeSort(arr, si, mid);
+        mergeSort(arr, mid+1, ei);
+
+        merge(arr, si, mid, ei);
+    }
+
+
+     public static void merge(int arr[], int si, int mid, int ei) {
+    // Temporary array to store merged result
+    int temp[] = new int[ei - si + 1];
+
+    int i = si;      // iterator for left part
+    int j = mid + 1; // iterator for right part
+    int k = 0;       // iterator for temp part
+
+    // Compare and copy smaller element from both parts to temp
+    while (i <= mid && j <= ei) {
+        if (arr[i] < arr[j]) {
+            temp[k] = arr[i];
+            i++;
+        } else {
+            temp[k] = arr[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Copy remaining elements from left half (if any)
+    while (i <= mid) {
+        temp[k++] = arr[i++];
+    }
+
+    // Copy remaining elements from right half (if any)
+    while (j <= ei) {
+        temp[k++] = arr[j++];
+    }
+
+    // Copy sorted elements back into original array
+    for (k = 0, i = si; k < temp.length; k++, i++) {
+        arr[i] = temp[k];
+    }
+    }
+
+
+
+    // Power Function : 
+    public static int power(int a, int n){
+        if(n == 0){
+            return 1;
+        }
+        return a * power(a, n-1);
+    }
+
     public static void main(String[] args){
         // int arr[] = {5, 4, 3, 2, 1};
         // bubbleSort(arr);
@@ -94,6 +175,21 @@ public class TimeComplexity {
 
 
 
-        System.out.println(sumOfn(4));
+        // System.out.println(sumOfn(4));
+        // https://chatgpt.com/s/t_68d91e8600e48191ba4848b3f0d64b8d
+
+
+        // System.out.println(fib(5));
+        // https://chatgpt.com/s/t_68da4b30cf4481918ec0846e5b030522
+
+
+        // int arr[] = {6, 3, 9, 5, 2, 8};
+        // mergeSort(arr, 0, arr.length-1);
+        // printArr(arr);
+
+
+
+        System.out.println(power(2, 2));
+        System.out.println(Math.pow(2, 2));
     }
 }
