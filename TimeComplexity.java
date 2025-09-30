@@ -232,6 +232,5 @@ public class TimeComplexity {
 
 
         System.out.println(power3(2,2));
-
     }
 }
