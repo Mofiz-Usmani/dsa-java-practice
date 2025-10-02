@@ -28,6 +28,21 @@ public class Backtracking {
         findSubsets(str, ans, i+1);
     }
 
+
+    //Find Permutations
+    public static void findPermutation(String str, String ans){
+        if(str.length() == 0){
+            System.out.println(ans);
+            return;
+        }
+
+        for(int i=0; i<str.length(); i++){
+            char curr = str.charAt(i);
+            String NewStr = str.substring(0, i) + str.substring(i+1);
+            findPermutation(NewStr, ans+curr);
+        }
+    }
+
     public static void printArr(int arr[]){
         for(int i=0; i<arr.length; i++){
             System.out.print(arr[i]+" ");
@@ -40,7 +55,12 @@ public class Backtracking {
         // printArr(arr);
 
 
+        // String str = "ab";
+        // findSubsets(str, "", 0);
+        // https://chatgpt.com/s/t_68dbc5243f008191a9e0996e0821e483
+
+
         String str = "abc";
-        findSubsets(str, "", 0);
+        findPermutation(str, "");
     }
 }
